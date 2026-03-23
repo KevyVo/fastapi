@@ -42,9 +42,11 @@ jobs:
         with:
           command: ${{ github.event.inputs.action || 'up' }}
           stack: ${{ github.event.inputs.stack || '' }}
+          version: 3.3.0
 
       - name: Deployment Summary
         uses: DefangLabs/defang-github-action@v1.4.0
         with:
           command: services
           stack: ${{ github.event.inputs.stack || '' }}
+          version: 3.3.0
